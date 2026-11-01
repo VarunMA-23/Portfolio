@@ -44,6 +44,71 @@ export type HeroContent = {
   stats: HeroStat[];
 };
 
+export type AboutMetaItem = {
+  label: string;
+  value: string;
+};
+
+export type AboutStatIcon = "trophy" | "impact";
+
+export type AboutStat = {
+  value: string;
+  label: string;
+  icon: AboutStatIcon;
+};
+
+export type SkillGroup = {
+  title: string;
+  skills: string[];
+};
+
+export type FocusArea = {
+  title: string;
+  description: string;
+  tags: string[];
+};
+
+export type AboutContent = {
+  eyebrow: string;
+  headline: {
+    before: string;
+    accent: string;
+    after: string;
+  };
+  intro: string[];
+  meta: AboutMetaItem[];
+  availability: string;
+  portrait: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+  stats: AboutStat[];
+  skills: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    groups: SkillGroup[];
+  };
+  focus: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    areas: FocusArea[];
+  };
+  learning: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: string[];
+  };
+  resume?: {
+    label: string;
+    href: string;
+  };
+};
+
 export type SiteConfig = {
   name: string;
   logo: string;
