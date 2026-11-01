@@ -109,6 +109,53 @@ export type AboutContent = {
   };
 };
 
+export type ProjectCategory = "AI/ML" | "FinTech" | "Healthcare" | "Systems";
+
+export type ProjectIconName = "brain" | "shield" | "network" | "scan" | "heart";
+
+export type ProjectTint = "peach" | "sky" | "mint" | "blush";
+
+export type ProjectMetric = {
+  value: string;
+  label: string;
+};
+
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  category: ProjectCategory;
+  summary: string;
+  icon: ProjectIconName;
+  tint: ProjectTint;
+  tags: string[];
+  metrics: ProjectMetric[];
+  overview: string[];
+  highlights: string[];
+  stack: string[];
+  links?: ProjectLink[];
+};
+
+export type ProjectContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  detail: {
+    backLabel: string;
+    overviewTitle: string;
+    highlightsTitle: string;
+    stackTitle: string;
+    nextLabel: string;
+    previousLabel: string;
+    ctaNote: string;
+  };
+  projects: Project[];
+};
+
 export type SiteConfig = {
   name: string;
   logo: string;
