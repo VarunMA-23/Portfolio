@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #fbf8f4;
+  --color-surface: #ffffff;
+  --color-ink: #14161c;
+  --color-muted: #5b6070;
+  --color-accent: #f2a07b;
+  --color-accent-text: #b5582f;
+  --color-accent-soft: #fce6da;
+  --color-peach: #fbebdd;
+  --color-sky: #ddebfa;
+  --color-mint: #dff1e3;
+  --color-blush: #f6eeec;
+  --color-success: #34c759;
+  --color-star: #f5a623;
+  --color-border: #ede7e0;
+}
+
+.dark {
+  --color-background: #121316;
+  --color-surface: #1c1e23;
+  --color-ink: #f5f3ef;
+  --color-muted: #a3a8b5;
+  --color-accent: #f5b894;
+  --color-accent-text: #f5b894;
+  --color-accent-soft: #2b211b;
+  --color-peach: #33251c;
+  --color-sky: #1c2836;
+  --color-mint: #1c2c22;
+  --color-blush: #2a2220;
+  --color-success: #4cd964;
+  --color-star: #f5a623;
+  --color-border: #2c2f37;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background font-sans text-ink antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    color: var(--color-ink);
+    background-color: var(--color-accent-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .shape-blob {
+    border-radius: 42% 58% 60% 40% / 45% 40% 60% 55%;
+  }
+}
