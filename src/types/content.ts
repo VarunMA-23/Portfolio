@@ -3,7 +3,13 @@ export type NavItem = {
   href: string;
 };
 
-export type SocialIconName = "x" | "instagram" | "linkedin" | "dribbble" | "github";
+export type SocialIconName =
+  | "x"
+  | "instagram"
+  | "linkedin"
+  | "dribbble"
+  | "github"
+  | "leetcode";
 
 export type SocialLink = {
   label: string;
@@ -196,7 +202,7 @@ export type InternshipContent = {
   };
 };
 
-export type ContactIconName = "mail" | "linkedin";
+export type ContactIconName = "mail" | "linkedin" | "leetcode";
 
 export type ContactChannel = {
   icon: ContactIconName;

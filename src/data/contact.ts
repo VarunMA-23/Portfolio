@@ -1,5 +1,5 @@
 import type { ContactContent } from "@/types/content";
-import { linkedinUrl, siteConfig } from "./site";
+import { leetcodeUrl, linkedinUrl, siteConfig } from "./site";
 
 export const contactContent: ContactContent = {
   eyebrow: "Get in Touch",
@@ -23,6 +23,15 @@ export const contactContent: ContactContent = {
       description: "Connect with me, send a direct message, or follow what I'm building.",
       href: linkedinUrl,
       cta: "View LinkedIn profile",
+      external: true,
+    },
+    {
+      icon: "leetcode",
+      label: "LeetCode",
+      value: "Varun_M_A",
+      description: "See my problem-solving practice, contest progress, and solutions.",
+      href: leetcodeUrl,
+      cta: "View LeetCode profile",
       external: true,
     },
   ],

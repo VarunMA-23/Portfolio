@@ -2,6 +2,8 @@ import type { SiteConfig } from "@/types/content";
 
 export const linkedinUrl = "https://www.linkedin.com/in/varun-ankanahalli-6512a03a9/";
 
+export const leetcodeUrl = "https://leetcode.com/u/Varun_M_A/";
+
 export const siteConfig: SiteConfig = {
   name: "Varun",
   logo: "Varun",
@@ -31,5 +33,6 @@ export const siteConfig: SiteConfig = {
       icon: "linkedin",
     },
     { label: "Varun on X", href: "https://x.com/VarunMA_23", icon: "x" },
+    { label: "Varun on LeetCode", href: leetcodeUrl, icon: "leetcode" },
   ],
 };

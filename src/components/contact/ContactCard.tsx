@@ -13,7 +13,7 @@ export function ContactCard({ channel }: { channel: ContactChannel }) {
         {channel.icon === "mail" ? (
           <Mail aria-hidden="true" className="size-6" />
         ) : (
-          <SocialIcon name="linkedin" className="size-6" />
+          <SocialIcon name={channel.icon} className="size-6" />
         )}
       </span>
       <span className="mt-6 text-xs font-semibold uppercase tracking-[0.15em] text-muted">
