@@ -196,6 +196,26 @@ export type InternshipContent = {
   };
 };
 
+export type ContactIconName = "mail" | "linkedin";
+
+export type ContactChannel = {
+  icon: ContactIconName;
+  label: string;
+  value: string;
+  description: string;
+  href: string;
+  cta: string;
+  external?: boolean;
+};
+
+export type ContactContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  availability: string;
+  channels: ContactChannel[];
+};
+
 export type SiteConfig = {
   name: string;
   logo: string;
