@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Trophy } from "lucide-react";
 import type { Project } from "@/types/content";
 import { ProjectVisual } from "./ProjectVisual";
 
@@ -9,6 +9,16 @@ export function ProjectCard({ project }: { project: Project }) {
       <ProjectVisual project={project} className="h-44 md:h-48" />
 
       <div className="mt-5 flex flex-1 flex-col">
+        {/* Achievement badge — shown on hackathon projects */}
+        {project.achievement && (
+          <div className="mb-3">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-star/15 px-3 py-1 text-xs font-semibold text-ink ring-1 ring-star/30">
+              <Trophy className="size-3 shrink-0 text-star" aria-hidden="true" />
+              {project.achievement}
+            </span>
+          </div>
+        )}
+
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-muted">
           {project.category}
         </p>

@@ -86,6 +86,13 @@ export const projectContent: ProjectContent = {
         "A persistent memory an on-call agent can query during an incident.",
       ],
       stack: ["Python", "Graph databases", "Vector DBs", "Redis", "Observability tooling"],
+      featured: true,
+      achievement: "🏆 National Hackathon Winner · ₹4,500 Prize · Scalar School of Technologies",
+      links: [{ label: "GitHub", href: "https://github.com/VarunMA-23/persistent-context" }],
+      photo: {
+        src: "/images/competitions/Accent.jpg",
+        alt: "Team holding certificates at Ascent Techfest 2026, Scaler School of Technology",
+      },
     },
     {
       slug: "mediscan",
@@ -110,6 +117,40 @@ export const projectContent: ProjectContent = {
         "Designed for low-latency inference and clean clinical integration.",
       ],
       stack: ["Python", "PyTorch", "FastAPI", "Docker", "Kubernetes"],
+      featured: true,
+      achievement: "🥉 5th Place · BMSIT Hackathon · ₹15,000 Prize",
+      links: [{ label: "GitHub", href: "https://github.com/VarunMA-23/MediScan-Main-portal" }],
+      photo: {
+        src: "/images/competitions/Anveshana.jpg",
+        alt: "Anveshana 3.0 National Prototype Competition winners announcement, BMSIT",
+      },
+    },
+    {
+      slug: "privisor",
+      title: "Privisor",
+      category: "AI/ML",
+      summary:
+        "A privacy-first AI advisor that keeps sensitive data on-device, enforcing strict data-boundary policies before any information leaves the client.",
+      icon: "shield",
+      tint: "sky",
+      tags: ["Privacy", "On-device AI", "Data governance"],
+      metrics: [
+        { value: "9th", label: "State round rank" },
+        { value: "100%", label: "On-device inference" },
+      ],
+      overview: [
+        "Privisor is a privacy-preserving AI advisory system built to ensure no sensitive user data crosses the client boundary without explicit policy clearance.",
+        "Designed for the international hackathon circuit, it combines on-device inference with a lightweight policy engine that classifies and sanitises payloads before any external call is made.",
+      ],
+      highlights: [
+        "On-device inference pipeline that eliminates raw-data leakage to remote models.",
+        "Policy engine that classifies, redacts, and audits data at the client boundary.",
+        "Built for the RVCE international hackathon — reached the State round, finishing 9th.",
+      ],
+      stack: ["Python", "On-device LLM", "Privacy engineering", "FastAPI"],
+      featured: true,
+      achievement: "🌐 9th Place · State Round · International Hackathon by RVCE",
+      links: [{ label: "GitHub", href: "https://github.com/VarunMA-23/privisor" }],
     },
     {
       slug: "medivault",

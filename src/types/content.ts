@@ -144,6 +144,12 @@ export type Project = {
   highlights: string[];
   stack: string[];
   links?: ProjectLink[];
+  /** Short achievement badge shown on the home page featured card, e.g. "🏆 National Hackathon Winner" */
+  achievement?: string;
+  /** When true the project appears in the home-page featured strip */
+  featured?: boolean;
+  /** Optional real photo for the card header (path relative to /public) */
+  photo?: { src: string; alt: string };
 };
 
 export type ProjectContent = {

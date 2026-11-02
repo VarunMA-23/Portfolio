@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Brain, HeartPulse, Network, ScanLine, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/cn";
 import type { Project, ProjectIconName, ProjectTint } from "@/types/content";
@@ -18,6 +19,28 @@ const tints = {
 } satisfies Record<ProjectTint, string>;
 
 export function ProjectVisual({ project, className }: { project: Project; className?: string }) {
+  // If the project has a real photo, show it instead of the tinted icon
+  if (project.photo) {
+    return (
+      <div
+        className={cn(
+          "group/visual relative overflow-hidden rounded-image",
+          className,
+        )}
+      >
+        <Image
+          src={project.photo.src}
+          alt={project.photo.alt}
+          fill
+          className="object-cover object-center transition-transform duration-500 motion-safe:group-hover:scale-105"
+          sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+        />
+        {/* subtle scrim */}
+        <div className="absolute inset-0 bg-ink/10" aria-hidden="true" />
+      </div>
+    );
+  }
+
   const Icon = icons[project.icon];
 
   return (
