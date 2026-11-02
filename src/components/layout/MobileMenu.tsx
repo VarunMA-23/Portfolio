@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { siteConfig } from "@/data/site";
 import type { NavItem } from "@/types/content";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { NavLink } from "./NavLink";
@@ -58,7 +59,12 @@ export function MobileMenu({ items }: { items: NavItem[] }) {
             ))}
           </ul>
         </nav>
-        <ButtonLink href="/contact" className="mt-4 w-full" onNavigate={() => setOpen(false)}>
+        <ButtonLink
+          href={`mailto:${siteConfig.email}`}
+          className="mt-4 w-full"
+          aria-label="Let's Talk — email Varun"
+          onNavigate={() => setOpen(false)}
+        >
           Let&apos;s Talk
         </ButtonLink>
       </div>

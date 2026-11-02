@@ -156,6 +156,46 @@ export type ProjectContent = {
   projects: Project[];
 };
 
+export type InternshipTrackIcon = "code" | "layers" | "brain" | "server";
+
+export type InternshipTrack = {
+  title: string;
+  icon: InternshipTrackIcon;
+  tint: ProjectTint;
+  bullets: string[];
+};
+
+export type InternshipLink = {
+  label: string;
+  href: string;
+};
+
+export type InternshipContent = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  availability: string;
+  primaryCta: InternshipLink;
+  secondaryCta: InternshipLink;
+  interests: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    tracks: InternshipTrack[];
+  };
+  lookingFor: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    items: string[];
+  };
+  goal: {
+    eyebrow: string;
+    title: string;
+    paragraphs: string[];
+  };
+};
+
 export type SiteConfig = {
   name: string;
   logo: string;

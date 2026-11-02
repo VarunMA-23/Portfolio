@@ -24,7 +24,11 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <ButtonLink href="/contact" className="hidden sm:inline-flex">
+          <ButtonLink
+            href={`mailto:${siteConfig.email}`}
+            className="hidden sm:inline-flex"
+            aria-label="Let's Talk — email Varun"
+          >
             Let&apos;s Talk
           </ButtonLink>
           <MobileMenu items={siteConfig.nav} />
