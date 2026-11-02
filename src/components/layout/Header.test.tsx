@@ -44,7 +44,7 @@ function renderHeader() {
 }
 
 describe("Header", () => {
-  it("renders the mockup navigation", () => {
+  it("renders the primary navigation", () => {
     renderHeader();
     const navigation = screen.getByRole("navigation", { name: "Primary" });
 
@@ -52,7 +52,21 @@ describe("Header", () => {
       within(navigation)
         .getAllByRole("link")
         .map((link) => link.textContent),
-    ).toEqual(["Home", "About", "Services", "Work", "Testimonials", "Contact"]);
+    ).toEqual(["Home", "About", "Projects", "Internships", "Contact"]);
+  });
+
+  it("links contact to LinkedIn and the call to action to email", () => {
+    renderHeader();
+    const navigation = screen.getByRole("navigation", { name: "Primary" });
+
+    expect(within(navigation).getByRole("link", { name: "Contact" })).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/varun-ankanahalli-6512a03a9/",
+    );
+    expect(screen.getByRole("link", { name: "Let's Talk — email Varun" })).toHaveAttribute(
+      "href",
+      "mailto:v66581770@gmail.com",
+    );
   });
 
   it("marks the current route with aria-current", () => {
