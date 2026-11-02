@@ -28,11 +28,15 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — Portfolio`,
-    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.name} Portfolio: Home`,
+    template: `${siteConfig.name} Portfolio: %s`,
   },
   description:
     "The portfolio of Varun Manjunatha Ankanahalli, an AI/ML engineer building autonomous systems.",
+  icons: {
+    icon: [{ url: "/images/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/images/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
