@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Pill } from "@/components/ui/Pill";
 import { SocialIcon } from "@/components/ui/SocialIcon";
@@ -42,6 +42,12 @@ export function HeroContent({ content }: { content: HeroContentData }) {
           <SocialIcon name="github" />
           {content.secondaryCta.label}
         </ButtonLink>
+        {content.resume ? (
+          <ButtonLink href={content.resume.href} variant="secondary">
+            <Download aria-hidden="true" className="size-5" />
+            {content.resume.label}
+          </ButtonLink>
+        ) : null}
       </div>
 
       <div className="mt-8 flex flex-wrap items-center gap-6">

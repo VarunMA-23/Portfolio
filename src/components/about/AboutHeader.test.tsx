@@ -47,19 +47,9 @@ describe("AboutHeader", () => {
     );
   });
 
-  it("links the resume and contact CTAs", () => {
+  it("links the contact CTA", () => {
     render(<AboutHeader content={aboutContent} />);
 
-    expect(screen.getByRole("link", { name: /Download Resume/ })).toHaveAttribute(
-      "href",
-      "/pdf/New%20Resume%20%282%29.pdf",
-    );
     expect(screen.getByRole("link", { name: /Get in Touch/ })).toHaveAttribute("href", "/contact");
-  });
-
-  it("hides the resume CTA when no resume is configured", () => {
-    render(<AboutHeader content={{ ...aboutContent, resume: undefined }} />);
-
-    expect(screen.queryByRole("link", { name: /Download Resume/ })).not.toBeInTheDocument();
   });
 });

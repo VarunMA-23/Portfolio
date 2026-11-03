@@ -41,6 +41,10 @@ export type HeroContent = {
     label: string;
     href: string;
   };
+  resume?: {
+    label: string;
+    href: string;
+  };
   portrait: {
     src: string;
     alt: string;
@@ -130,10 +134,6 @@ export type AboutContent = {
     title: string;
     description: string;
     items: string[];
-  };
-  resume?: {
-    label: string;
-    href: string;
   };
 };
 

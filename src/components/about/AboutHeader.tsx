@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Pill } from "@/components/ui/Pill";
@@ -47,13 +47,7 @@ export function AboutHeader({ content }: { content: AboutContent }) {
           </dl>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            {content.resume ? (
-              <ButtonLink href={content.resume.href}>
-                <Download aria-hidden="true" className="size-5" />
-                {content.resume.label}
-              </ButtonLink>
-            ) : null}
-            <ButtonLink href="/contact" variant={content.resume ? "secondary" : "primary"}>
+            <ButtonLink href="/contact">
               Get in Touch
               <ArrowUpRight aria-hidden="true" className="size-5" />
             </ButtonLink>

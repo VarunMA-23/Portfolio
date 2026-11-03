@@ -93,8 +93,4 @@ export const aboutContent: AboutContent = {
       "Probabilistic reasoning and large-scale system design",
     ],
   },
-  resume: {
-    label: "Download Resume",
-    href: "/pdf/New%20Resume%20%282%29.pdf",
-  },
 };

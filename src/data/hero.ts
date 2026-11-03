@@ -20,6 +20,10 @@ export const heroContent: HeroContent = {
     label: "View GitHub",
     href: "https://github.com/VarunMA-23",
   },
+  resume: {
+    label: "Resume",
+    href: "/pdf/New%20Resume%20%282%29.pdf",
+  },
   portrait: {
     src: "/images/Varun_insta_560x640.jpg",
     alt: "Portrait of Varun Manjunatha Ankanahalli",

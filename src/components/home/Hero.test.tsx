@@ -45,6 +45,15 @@ describe("Hero", () => {
     );
   });
 
+  it("links the resume CTA to the PDF", () => {
+    render(<Hero />);
+
+    expect(screen.getByRole("link", { name: /Resume/ })).toHaveAttribute(
+      "href",
+      "/pdf/New%20Resume%20%282%29.pdf",
+    );
+  });
+
   it("shows availability as text, the portrait, and the stat badges", () => {
     render(<Hero />);
 
