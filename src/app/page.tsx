@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { LeetCodeStats } from "@/components/home/LeetCodeStats";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <LeetCodeStats />
       <FeaturedProjects />
     </>
   );

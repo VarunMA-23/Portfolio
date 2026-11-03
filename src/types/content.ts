@@ -50,6 +50,28 @@ export type HeroContent = {
   stats: HeroStat[];
 };
 
+export type LeetCodeDifficultyKey = "easy" | "medium" | "hard";
+
+export type LeetCodeDifficulty = {
+  key: LeetCodeDifficultyKey;
+  label: string;
+  solved: number;
+};
+
+export type LeetCodeContent = {
+  eyebrow: string;
+  headline: {
+    before: string;
+    accent: string;
+    after: string;
+  };
+  description: string;
+  profileUrl: string;
+  profileLabel: string;
+  updatedLabel: string;
+  difficulties: LeetCodeDifficulty[];
+};
+
 export type AboutMetaItem = {
   label: string;
   value: string;
