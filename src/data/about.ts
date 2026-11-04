@@ -30,24 +30,23 @@ export const aboutContent: AboutContent = {
   skills: {
     eyebrow: "What I Work With",
     title: "Skills & Tools",
-    description:
-      "A practical stack built around shipping ML systems end to end, from data and training to APIs, queues, and deployment.",
+    description: "Technologies I work with.",
     groups: [
       {
-        title: "Languages & Core",
-        skills: ["Python", "TypeScript", "JavaScript", "C", "SQL"],
+        title: "Frontend",
+        skills: ["React", "JavaScript", "Redux"],
       },
       {
-        title: "AI & ML",
-        skills: ["PyTorch", "HuggingFace", "LangGraph", "LangChain", "FastAPI"],
+        title: "Backend",
+        skills: ["Express", "Python"],
       },
       {
-        title: "Systems & Infra",
-        skills: ["Docker", "Kubernetes", "Apache Kafka", "Redis"],
+        title: "AI & LLMs",
+        skills: ["LangChain", "LangGraph", "Basic RAG"],
       },
       {
-        title: "Data & Tooling",
-        skills: ["PostgreSQL", "MongoDB", "Vector DBs", "Git", "Linux"],
+        title: "Tools & DB",
+        skills: ["Docker", "Git", "MongoDB"],
       },
     ],
   },
@@ -85,12 +84,8 @@ export const aboutContent: AboutContent = {
   },
   learning: {
     eyebrow: "Always Learning",
-    title: "Currently Exploring",
-    description: "The areas I'm actively studying and building with next.",
-    items: [
-      "Multi-agent graph orchestration with LangGraph",
-      "Distributed low-latency ML inference and MLOps",
-      "Probabilistic reasoning and large-scale system design",
-    ],
+    title: "Learning",
+    description: "Areas I'm actively learning.",
+    items: ["TypeScript", "Low Level System Design"],
   },
 };
